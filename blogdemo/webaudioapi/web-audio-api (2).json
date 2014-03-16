@@ -1,0 +1,314 @@
+{
+  "slides": [
+    {
+      "num": 0,
+      "components": [
+        {
+          "TextBox": {},
+          "x": 81,
+          "y": 184,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font face=\"Ubuntu, sans-serif\">Web audio API</font>",
+          "size": 131,
+          "selected": false
+        },
+        {
+          "src": "http://files.myopera.com/themebenzo/albums/13911702/DJ%20Music%201200x800.png",
+          "type": "Image",
+          "x": 523,
+          "y": 387,
+          "scale": {
+            "x": 0.385,
+            "y": 0.385,
+            "width": 462,
+            "height": 308
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "selected": false,
+      "active": false,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "num": 4,
+      "components": [
+        {
+          "TextBox": {},
+          "x": 107,
+          "y": 33,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<div style=\"text-align: center;\"><b><font color=\"#678f00\">&lt;audio&gt;</font><font color=\"#008be0\"> is mainstream</font></b></div>",
+          "size": 72,
+          "selected": false
+        },
+        {
+          "src": "http://html5.by/blogdemo/webaudioapi/img/api-ws-tag.png",
+          "type": "Image",
+          "x": 231,
+          "y": 232,
+          "scale": {
+            "x": 1.2675,
+            "y": 1.2675,
+            "width": 507,
+            "height": 507
+          },
+          "imageType": "PNG",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 24,
+          "y": 108,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<div style=\"font-size: 48px; text-align: center;\">Web audio API is not about &lt;audio&gt; element</div>",
+          "size": 72,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0.84,
+      "rotateY": 1.16,
+      "rotateZ": 0,
+      "selected": false,
+      "active": false,
+      "x": 153,
+      "y": 73
+    },
+    {
+      "num": 5,
+      "components": [
+        {
+          "TextBox": {},
+          "x": 118,
+          "y": 138,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font color=\"#678f00\">&lt;audio&gt;&nbsp;</font>",
+          "size": 64,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 152,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font color=\"#678f00\">Web audio API</font><br>",
+          "size": 48,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 340,
+          "y": 29,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<b><font color=\"#008be0\">Usecases</font></b><br>",
+          "size": 72,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 101,
+          "y": 266,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<ul><li><span style=\"line-height: normal;\">Audio players</span></li><li><span style=\"line-height: normal;\">Background music</span></li><li><span style=\"line-height: normal;\">Audio tips</span></li><li><span style=\"line-height: normal;\">..etc</span></li></ul>",
+          "size": 36,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 558,
+          "y": 264,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<ul><li><span style=\"line-height: normal;\">Game sound</span><br></li><li><span style=\"line-height: normal;\">Mixing, <br>processing, <br>filtering...</span><br></li><li><span style=\"line-height: normal;\">3D realistic sound scene</span><br></li><li><span style=\"line-height: normal;\">Audio visualisation</span><br></li><li><span style=\"line-height: normal;\">Audio syntesis</span><br></li><li><span style=\"line-height: normal;\">etc...</span></li></ul>",
+          "size": 36,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "selected": false,
+      "active": false,
+      "x": 1053,
+      "y": 209
+    },
+    {
+      "num": 1,
+      "components": [
+        {
+          "TextBox": {},
+          "x": 205,
+          "y": 257,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<ul><li><span style=\"line-height: normal;\">REACH API</span></li><li><span style=\"line-height: normal;\">better time sync</span><br></li><li><span style=\"line-height: normal;\">processing possibility with tons of <br>ready to use modules&nbsp;<br></span><span style=\"line-height: normal;\">(filters, gain, delay, channel split, ...)</span></li><li><span style=\"line-height: normal;\">sound syntesis possibility</span></li><li><span style=\"line-height: normal;\">3D pane</span></li><li><span style=\"line-height: normal;\">channels (up to 32)</span></li><li><span style=\"line-height: normal;\">direct access to audio data <br>(visualisation possibility)</span></li></ul>",
+          "size": 36,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 265,
+          "y": 40,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<div style=\"text-align: center;\"><b><font color=\"#008be0\">Web audio API&nbsp;</font></b></div><b><div style=\"text-align: center;\"><b><font color=\"#008be0\">Advantages</font></b></div></b>",
+          "size": 72,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0.1,
+      "rotateZ": -0.29,
+      "selected": false,
+      "active": false,
+      "x": -10,
+      "y": 306
+    },
+    {
+      "num": 6,
+      "components": [
+        {
+          "src": "http://html5.by/blogdemo/webaudioapi/img/formats-browsers.png",
+          "type": "Image",
+          "x": 13,
+          "y": 204,
+          "scale": {
+            "x": 0.873029772329247,
+            "y": 0.873029772329247,
+            "width": 997,
+            "height": 550.0087565674256
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "selected": true,
+      "active": true
+    },
+    {
+      "num": 3,
+      "components": [
+        {
+          "src": "http://localhost:8888/webaudioapi/gain.html",
+          "type": "WebFrame",
+          "x": 28,
+          "y": 148,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "selected": false,
+          "skewY": 0
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "selected": false,
+      "active": false,
+      "x": 632,
+      "y": 39
+    },
+    {
+      "num": 2,
+      "components": [],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "selected": false,
+      "active": false,
+      "x": 1083,
+      "y": -32
+    }
+  ],
+  "background": "defaultbg",
+  "activeSlide": {
+    "num": 6,
+    "components": [
+      {
+        "src": "http://html5.by/blogdemo/webaudioapi/img/formats-browsers.png",
+        "type": "Image",
+        "x": 13,
+        "y": 204,
+        "scale": {
+          "x": 0.873029772329247,
+          "y": 0.873029772329247,
+          "width": 997,
+          "height": 550.0087565674256
+        },
+        "imageType": "PNG",
+        "selected": false
+      }
+    ],
+    "z": 0,
+    "impScale": 3,
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "selected": true,
+    "active": true
+  },
+  "fileName": "web-audio-api",
+  "customStylesheet": ".blue{\n  color:#00a2ff;\n}",
+  "overviewX": 536.5,
+  "overviewY": 137
+}

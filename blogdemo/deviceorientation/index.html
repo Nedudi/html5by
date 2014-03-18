@@ -28,21 +28,9 @@
               transform.rotate.x = Math.round(e.beta)+'_deg';
               transform.rotate.y = Math.round(e.gamma)+'_deg';
               $('.deviceorientation').transform3d('set',transform);
-
-
-              // поворот и масштабирование квадрата
-              // в зависимости от ориентации экрана
-              // var rotate = 'rotate(' + e.gamma + 'deg)';
-              // var scale = 'scale(' + ((e.beta/180)*2 + 1) + ')';
-              // document.getElementById('a').style.webkitTransform = rotate+' '+scale;
             }
 
             window.addEventListener('deviceorientation', onOrientationChange);
-
-
-
-
-
 
             $('.deviceorientation').transform3d({
               onChange: function(v){
@@ -86,11 +74,6 @@
                   "z":"0_"
                }
             };
-
-
-            //$('.deviceorientation').transform3d('set',transform);
-
-
           };
 
         </script>
@@ -98,9 +81,9 @@
     </head>
     <body>
       <div class="dxyz">
-        <div id="alpha" style="color:red;"></div>
-        <div id="beta" style="color:green;"></div>
-        <div id="gamma" style="color:blue;"></div>
+        <div id="alpha"></div>
+        <div id="beta"></div>
+        <div id="gamma"></div>
       </div>
       <div class="deviceorientation">
 

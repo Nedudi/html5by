@@ -1,6 +1,6 @@
 html, body, div{
   -moz-box-sizing:border-box;
-       box-sizing:border-box;
+  box-sizing:border-box;
   text-align:center;
   font-family: Arial;
   margin: 0;
@@ -13,6 +13,24 @@ html, body, div{
   top: 0;
   left: 0;
   padding: 20px;
+  text-align: left;
+  width: 150px;
+  font-size: 20px;
+}
+
+
+
+#alpha{
+  color: rgba(0,142,211,1);
+  text-align: left;
+}
+#beta{
+  color: rgba(247,61,31,1);
+  text-align: left;
+}
+#gamma{
+  color: rgba(0,167,79,1);
+  text-align: left;
 }
 
 .r3d-rotatezhandler{
@@ -23,22 +41,26 @@ html, body, div{
   width: 100%;
   height: 400px;
 }
+deviceorientation
+
+window.addEventListener('deviceorientation', function(e){
+  //e.alpha;
+  //e.beta;
+  //e.gamma;
+}, false);
+
+
 
 .r3d-container{
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   user-select: none;
-
-
   background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.1) 2px, rgba(0,0,0,0) 2px), -webkit-linear-gradient(0, rgba(255,255,255,0.1) 2px, rgba(0,0,0,0) 2px), -webkit-linear-gradient(90deg, rgba(255,255,255,0.05) 1px, rgba(0,0,0,0) 1px), -webkit-linear-gradient(0, rgba(255,255,255,0.05) 1px, rgba(0,0,0,0) 1px), rgb(100,100,100);
   background: -moz-linear-gradient(0, rgba(255,255,255,0.1) 2px, rgba(0,0,0,0) 2px), -moz-linear-gradient(90deg, rgba(255,255,255,0.1) 2px, rgba(0,0,0,0) 2px), -moz-linear-gradient(0, rgba(255,255,255,0.05) 1px, rgba(0,0,0,0) 1px), -moz-linear-gradient(90deg, rgba(255,255,255,0.05) 1px, rgba(0,0,0,0) 1px), rgb(100,100,100);
   background: linear-gradient(0, rgba(255,255,255,0.1) 2px, rgba(0,0,0,0) 2px), linear-gradient(90deg, rgba(255,255,255,0.1) 2px, rgba(0,0,0,0) 2px), linear-gradient(0, rgba(255,255,255,0.05) 1px, rgba(0,0,0,0) 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, rgba(0,0,0,0) 1px), rgb(100,100,100);
   background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
   -webkit-background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
   background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-
-
-
   overflow: hidden;
   position: relative;
   cursor: pointer !important;
@@ -47,38 +69,25 @@ html, body, div{
 .r3d-target{
   width:80px;
   height:80px;
-
   top: 50%;
   left: 50%;
-
   margin-top: -40px;
   margin-left:  -40px;
-
   position: absolute;
-
   -webkit-transform-style: preserve-3d;
   transform-style:    preserve-3d;
-
   -webkit-backface-visibility: visible;
   backface-visibility:    visible;
-
-  /*box-shadow:  0 0 0 1px rgba(0,0,0,0.5);*/
   border: 1px dashed rgba(255,255,255,0.05);
-
-  text-shadow: 0 0 0 transparent;
-/*  background-color: rgba(60,60,60,1);*/
-
 }
 
 .r3d-target-wrapper{
   width:100%;
   height: 100%;
-
   -webkit-transform-style: preserve-3d;
   -webkit-transform: translateZ(1000px);
   transform-style:    preserve-3d;
   transform: translateZ(1000px);
-
   -webkit-backface-visibility: visible;
   backface-visibility:    visible;
 }
@@ -89,20 +98,13 @@ html, body, div{
   position: absolute;
   top:0%;
   left: 0%;
-
-
   -webkit-transform-style: preserve-3d;
   transform-style:    preserve-3d;
-
   -webkit-backface-visibility: visible;
   backface-visibility:    visible;
-
   z-index: 9;
   background-color: rgba(30,30,30,0.5);
-/*  border: 1px solid rgba(100,100,100,1);*/
-/*  border-radius: 10%;*/
-/*  box-shadow:  0 0 0 1px ;*/
-    box-shadow:  0 0 0 1px rgba(0,0,0,0.3);
+  box-shadow:  0 0 0 1px rgba(0,0,0,0.3);
   background-size: 6px 6px;
   background-image: -webkit-linear-gradient(-45deg, rgba(100,100,100,0.1) 25%, transparent 25%,
             transparent 50%, rgba(100,100,100,0.1) 50%, rgba(100,100,100,0.1) 75%,
@@ -110,8 +112,6 @@ html, body, div{
   background-image: linear-gradient(-45deg, rgba(100,100,100,0.1) 25%, transparent 25%,
             transparent 50%, rgba(100,100,100,0.1) 50%, rgba(100,100,100,0.1) 75%,
             transparent 75%, transparent);
-
-
   color:rgba(100,100,100,1);
   line-height: 120px;
   font-size: 14px;
@@ -126,11 +126,6 @@ html, body, div{
   left: 0%;
 }
 
-
-
-
-
-
 .r3d-axesbox{
   position: absolute;
   overflow: visible;
@@ -138,14 +133,12 @@ html, body, div{
   left:-50%;
   width: 100%;
   height: 100%;
-
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: visible;
   -webkit-perspective: 1000;
   transform-style: preserve-3d;
   backface-visibility:    visible;
   perspective: 1000;
-
   pointer-events: none;
 }
 
@@ -157,17 +150,12 @@ html, body, div{
   width:150%;
   height: 2px;
   margin-top: -1px;
-
   -webkit-transform-origin: 0;
   -webkit-transform-style: preserve-3d;
- /* -webkit-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);*/
   transform-origin: 0;
   transform-style: preserve-3d;
-
-
   -webkit-backface-visibility: visible;
   backface-visibility:    visible;
-
   pointer-events: none;
 }
 
@@ -180,19 +168,12 @@ html, body, div{
   width:100%;
   height:100%;
   margin-top: -1px;
-
-/*      -webkit-transform-origin:0%;*/
   -webkit-transform: rotateX(90deg) rotateY(0) rotateZ(0deg);
   -webkit-transform-style: preserve-3d;
   transform: rotateX(90deg) rotateY(0) rotateZ(0deg);
   transform-style: preserve-3d;
-
   -webkit-backface-visibility: visible;
   backface-visibility:    visible;
-
-/*
-  background-color: rgba(100,100,100,0.7);
-*/
   border-style:inherit;
   border-width:inherit;
   background:inherit;
@@ -203,21 +184,18 @@ html, body, div{
 
 .r3d-axes-x{
   background: rgba(247,61,31,1);
-/*  border-color: rgba(247,61,31,1);*/
   -webkit-transform: rotateX(0) rotateY(0) rotateZ(0) translateZ(1px);
           transform: rotateX(0) rotateY(0) rotateZ(0) translateZ(1px);
 }
 
 .r3d-axes-y{
   background: rgba(0,167,79,1);
-/*  border-color: rgba(0,167,79,1);*/
   -webkit-transform: rotateX(0) rotateY(0) rotateZ(-90deg) translateZ(1px);
           transform: rotateX(0) rotateY(0) rotateZ(-90deg) translateZ(1px);
 }
 
 .r3d-axes-z{
   background: rgba(0,142,211,1);
-/*  border-color: rgba(0,142,211,1);*/
   -webkit-transform: rotateX(90deg) rotateY(0) rotateZ(90deg) translateX(1px);
           transform: rotateX(90deg) rotateY(0) rotateZ(90deg) translateX(1px);
 }
@@ -227,28 +205,9 @@ html, body, div{
   overflow: visible;
   top:50%;
   right:20px;
-
   margin-top: -5px;
-
   border-style:inherit;
   border-color:inherit;
-
-
-/*width: 0;
-height: 0;
-border-left: 60px solid #fff;
-border-top: 20px dashed transparent;
-border-bottom: 20px dashed transparent;
-
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-
-
-  -webkit-backface-visibility: visible;
-  -moz-backface-visibility:    visible;
-  -ms-backface-visibility:     visible;*/
-
   pointer-events: none;
 }
 
@@ -293,7 +252,6 @@ border-bottom: 20px dashed transparent;
   top: 20px;
   left: 20px;
   text-align: center;
-  text-shadow:0 0 1px rgba(0,0,0,1);
   font-size: 18px;
   pointer-events: none;
 }

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="css/main.css">
+        <link async href="http://fonts.googleapis.com/css?family=Abel" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+
+        <script>
+
+          window.onload = function(){
+            var sepia = function (imageData) {
+              // получаем одномерный массив, описывающий все пиксели изображения
+              var pixels = imageData.data;
+              // циклически преобразуем массив, изменяя значения красного, зеленого и синего каналов
+              for (var i = 0; i < pixels.length; i += 4) {
+                var r = pixels[i];
+                var g = pixels[i + 1];
+                var b = pixels[i + 2];
+                pixels[i]     = (r * 0.393)+(g * 0.769)+(b * 0.189); // red
+                pixels[i + 1] = (r * 0.349)+(g * 0.686)+(b * 0.168); // green
+                pixels[i + 2] = (r * 0.272)+(g * 0.534)+(b * 0.131); // blue
+              }
+              return imageData;
+            };
+
+              // создаем или находим изображение
+            var img = document.getElementById('img');
+
+            img.onload = function() {
+              // создаем или находим canvas
+              var canvas = document.getElementById('canvas');
+              // получаем его 2D контекст
+              var context = canvas.getContext('2d');
+              // помещаем изображение в контекст
+              context.drawImage(img, 0, 0);
+              // получаем объект, описывающий внутреннее состояние области контекста
+              var imageData = context.getImageData(0, 0, 300, 300);
+              // фильтруем
+              imageDataFiltered = sepia(imageData);
+              // кладем результат фильтрации на canvas
+              context.putImageData(imageDataFiltered, 0, 0);
+            }
+            img.src = 'img/girl.png';
+          };
+
+        </script>
+
+    </head>
+    <body>
+
+      <div class="stuff" id="stuff">
+          <div class="item item1">
+            <span> &lt;img&gt; </span>
+            <img id="img"  width="300" height="300">
+          </div>
+          <div class="item item2">
+            <span> &lt;canvas&gt; </span>
+            <canvas id="canvas" width="300" height="300" ></canvas>
+          </div>
+      </div>
+
+    </body>
+</html>

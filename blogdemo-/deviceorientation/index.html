@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="css/main.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.transform3d.js"></script>
+        <script type="text/javascript" src="js/fns.js"></script>
+        <script type="text/javascript" src="js/jquery.pointerAction.js"></script>
+        <script>
+
+          window.onload = function(){
+
+
+
+
+            function onOrientationChange(e) {
+              // покажем значения параметров в реальном времени
+              document.getElementById('alpha').innerHTML = 'α = ' + Math.round(e.alpha);
+              document.getElementById('beta').innerHTML = 'β = '+Math.round(e.beta);
+              document.getElementById('gamma').innerHTML = 'γ = '+Math.round(e.gamma);
+
+              transform.rotate.z = Math.round(e.alpha)+'_deg';
+              transform.rotate.x = Math.round(e.beta)+'_deg';
+              transform.rotate.y = Math.round(e.gamma)+'_deg';
+              $('.deviceorientation').transform3d('set',transform);
+            }
+
+            window.addEventListener('deviceorientation', onOrientationChange);
+
+            $('.deviceorientation').transform3d({
+              onChange: function(v){
+                //updateControls(v);
+              }
+            });
+
+
+            var transform = {
+               "rotate":{
+                  "x":"0_deg",
+                  "y":"0_deg",
+                  "z":"0_deg"
+               },
+               "scale":{
+                  "x":"1",
+                  "y":"1",
+                  "z":"1"
+               },
+               "translate":{
+                  "x":"0_px",
+                  "y":"0_px",
+                  "z":"0_px"
+               },
+               "skew":{
+                  "x":"0_deg",
+                  "y":"0_deg",
+                  "z":"0_deg"
+               },
+               "origin":{
+                  "x":"50_%",
+                  "y":"50_%",
+                  "z":"0_%"
+               },
+               "perspective-origin":{
+                  "x":"50_%",
+                  "y":"50_%",
+                  "z":"0_%"
+               },
+               "perspective":{
+                  "z":"0_"
+               }
+            };
+          };
+
+        </script>
+
+    </head>
+    <body>
+      <div class="dxyz">
+        <div id="alpha"></div>
+        <div id="beta"></div>
+        <div id="gamma"></div>
+      </div>
+      <div class="deviceorientation">
+
+      </div>
+
+    </body>
+</html>

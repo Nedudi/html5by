@@ -14,14 +14,13 @@
 
       body{
         font-family: 'Exo 2', sans-serif;
-        padding: 30px;
-        color: rgb(100,100,100);
       }
 
       ol {
-        //counter-reset:li;
+        counter-reset:myCounter;
         margin-left:0;
-        padding-left:0;
+        padding-left:5px;
+        color: rgb(100,100,100);
       }
 
       li {
@@ -30,6 +29,7 @@
         margin: 0.45em 0;
         list-style: none;
         line-height: 1.8em;
+        cursor: pointer;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
       }
@@ -39,8 +39,8 @@
       }
 
       li:before {
-        content:counter(li);
-        counter-increment:li;
+        content:counter(myCounter);
+        counter-increment:myCounter;
         position:absolute;
         top:0;
         left:0;
@@ -110,10 +110,7 @@
 			</li>
 
 			<li>
-			  Выкладывайте картофельное тесто большой ложкой на сковороду и слегка прижмите оладьи лопаточкой.
-			</li>
-			<li>
-			  Жарьте примерно 4 минуты с каждой стороны, пока не подрумянятся.
+			  Выкладывайте картофельное тесто большой ложкой на сковороду и слегка прижмите оладьи лопаточкой. Жарьте примерно 4 минуты с каждой стороны, пока не подрумянятся.
 			</li>
 			<li>
         Сразу подавайте на стол

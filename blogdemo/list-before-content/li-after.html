@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	  <meta charset="utf-8">
+	  <title>Стилизуем li</title>
+	  <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+    <style>
+
+      /* ---------- style start ----------- */
+
+      body{
+        font-family: 'Exo 2', sans-serif;
+      }
+
+      ol{
+        margin: 0;
+        padding: 0;
+        counter-reset: myCounter;
+      }
+
+      li{
+        list-style: none;
+      }
+
+      li:before {
+        content:counter(myCounter);
+        counter-increment: myCounter;
+        color: white;
+        background: #2980B9;
+        display: inline-block;
+        text-align: center;
+        margin: 5px 10px;
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+      }
+
+      /* ---------- style end ----------- */
+
+    </style>
+
+    <ol>
+      <li> Посадить дерево </li>
+      <li> Построить дом </li>
+      <li> Вырастить сына </li>
+    </ol>
+	</body>
+</html>

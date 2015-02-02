@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Scroll the dog down - Scroll the cat up</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="js/vendor/jquery-1.10.2.min.js"></script>
+      <script src="../src/jquery.scroolly.js"></script>
+  </head>
+  <body>
+    <style>
+      body{
+        text-align:center;
+        color: rgba(0,0,0,0.3);
+        font-family: Arial;
+      }
+      .me{
+        height:200px;
+        width:200px;
+        margin:0 auto;
+        border:none;
+        display:block;
+        transform-origin: 50% 50%;
+      }
+    </style>
+
+
+    <h1>Scroll the dog down</h1>
+    <div class="content">
+      <img src="cat-dog.png" class="me">
+    </div>
+    <h1>Scroll the cat up</h1>
+
+    <script>
+      var demoMargin = window.outerHeight-100+'px';
+      $('.content').css({paddingTop:demoMargin, paddingBottom:demoMargin});
+
+      $('.me').scroolly([
+
+        {
+          from: 'el-top = vp-bottom - 100px',
+          to: 'el-bottom = vp-bottom - 100px',
+          cssFrom:{
+            opacity:'.0'
+          },
+          cssTo:{
+            opacity:'1'
+          },
+        },
+
+        {
+          from: 'el-center = vp-center + 30vp',
+          to: 'el-center = vp-center - 30vp',
+          cssFrom:{
+            'transform': 'rotate(0deg)',
+          },
+          cssTo:{
+            'transform': 'rotate(180deg)',
+          },
+        },
+
+        {
+          from: 'el-top = vp-top + 100px',
+          to:   'el-bottom = vp-top + 100px',
+          cssFrom:{
+            opacity:'1'
+          },
+          cssTo:{
+            opacity:'.0'
+          },
+        }
+
+      ]);
+    </script>
+  </body>
+</html>

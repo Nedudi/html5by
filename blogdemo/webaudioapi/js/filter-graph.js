@@ -289,7 +289,17 @@ function initFilterGraph() {
 }
 
 function changeFilterType( value ) {
-  filter.type = value;
+  var values = [
+    "lowpass",
+    "highpass",
+    "bandpass",
+    "lowshelf",
+    "highshelf",
+    "peaking",
+    "notch",
+    "allpass"
+  ];
+  filter.type = values[value];
   drawCurve();
 }
 

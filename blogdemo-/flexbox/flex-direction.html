@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>flexbox example</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/flat-ui.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link async href="http://fonts.googleapis.com/css?family=Advent%20Pro" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+      <style>
+        .wrap{
+          display: flex;
+          flex-direction:row;
+        }
+      </style>
+
+
+      <form class="options">
+        <fieldset>
+          <strong>flex-direction:</strong>
+          <!-- flex-direction: row | row-reverse | column | column-reverse -->
+          <label class="radio"><input type="radio" name="flex-direction" value="row" data-toggle="radio" checked="">row</label>
+          <label class="radio"><input type="radio" name="flex-direction" value="row-reverse" data-toggle="radio">row-reverse</label>
+          <label class="radio"><input type="radio" name="flex-direction" value="column" data-toggle="radio">column</label>
+          <label class="radio"><input type="radio" name="flex-direction" value="column-reverse" data-toggle="radio">column-reverse</label>
+        </fieldset>
+
+        <!-- nowrap | wrap | wrap-reverse -->
+        <!--fieldset>
+          <strong>flex-wrap:</strong>
+
+          <label class="radio"><input type="radio" name="flex-wrap" value="nowrap" data-toggle="radio" checked="">nowrap</label>
+          <label class="radio"><input type="radio" name="flex-wrap" value="wrap" data-toggle="radio">wrap</label>
+          <label class="radio"><input type="radio" name="flex-wrap" value="wrap-reverse" data-toggle="radio">wrap-reverse</label>
+        </fieldset-->
+
+
+        <!-- justify-content: flex-start | flex-end | center | space-between | space-around -->
+        <fieldset>
+          <strong>justify-content:</strong>
+          <label class="radio"><input type="radio" name="justify-content" value="flex-start" data-toggle="radio" checked="">flex-start</label>
+          <label class="radio"><input type="radio" name="justify-content" value="flex-end" data-toggle="radio">flex-end</label>
+          <label class="radio"><input type="radio" name="justify-content" value="center" data-toggle="radio">center</label>
+          <label class="radio"><input type="radio" name="justify-content" value="space-between" data-toggle="radio">space-between</label>
+          <label class="radio"><input type="radio" name="justify-content" value="space-around" data-toggle="radio">space-around</label>
+        </fieldset>
+
+        <!-- align-items: flex-start | flex-end | center | baseline | stretch-->
+        <fieldset>
+          <strong>align-items:</strong>
+          <label class="radio"><input type="radio" name="align-items" value="flex-start" data-toggle="radio">flex-start</label>
+          <label class="radio"><input type="radio" name="align-items" value="flex-end" data-toggle="radio">flex-end</label>
+          <label class="radio"><input type="radio" name="align-items" value="center" data-toggle="radio">center</label>
+          <label class="radio"><input type="radio" name="align-items" value="baseline" data-toggle="radio">baseline</label>
+          <label class="radio"><input type="radio" name="align-items" value="stretch" data-toggle="radio" checked="">stretch</label>
+        </fieldset>
+
+      </form>
+
+      <section class="demo">
+        <div class="wrap">
+            <div>Start</div>
+            <div>item 1</div>
+            <div>item 2</div>
+            <div>item 3</div>
+            <div>End</div>
+
+      </section>
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap-select.js"></script>
+      <script src="js/bootstrap-switch.js"></script>
+      <script src="js/flatui-checkbox.js"></script>
+      <script src="js/flatui-radio.js"></script>
+
+      <script type="text/javascript">
+        jQuery(function(){
+          $(document).on('click.radio.data-api',  function (e) {
+            var $radio = $(e.target);
+            e && e.preventDefault() && e.stopPropagation();
+            if (!$radio.hasClass('radio')) $radio = $radio.closest('.radio');
+            var radio = $radio.find(':radio');
+            var checked = $(radio);
+            var prop = checked.attr('name');
+            var value = checked.prop('value');
+            if(checked.length){
+              console.log(prop,value)
+              $('.wrap').css(prop,value);
+            }
+          });
+        });
+      </script>
+    </body>
+</html>

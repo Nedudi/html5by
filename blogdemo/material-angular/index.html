@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Material Design with Angular.js</title>
+	<link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+	<script type="text/javascript" src="js/hammer.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="js/angular-aria.min.js"></script>
+	<script type="text/javascript" src="js/angular-material.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+	<div ng-app="app" ng-controller="AppCtrl">
+	    <md-tabs md-selected="data.selectedIndex">
+	        <md-tab id="tab1" aria-controls="tab1-content">
+	            Ввод анкеты
+	        </md-tab>
+	        <md-tab id="tab2" aria-controls="tab2-content">
+	            Список пользователей
+	        </md-tab>
+	    </md-tabs>
+	    <ng-switch on="data.selectedIndex" class="tabpanel-container">
+	        <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0">
+	            <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+	                <md-content class="md-padding">
+	                    <form name="userForm">
+	                        <div layout layout-sm="column">
+	                            <md-input-container flex>
+	                                <label>Имя</label>
+	                                <input ng-model="user.firstName" md-maxlength="20" placeholder="">
+	                            </md-input-container>
+	                            <md-input-container flex>
+	                                <label>Фамилия</label>
+	                                <input ng-model="user.lastName" md-maxlength="20" placeholder="">
+	                            </md-input-container>
+	                        </div>
+	                        <md-input-container flex>
+	                            <label>Адрес</label>
+	                            <input ng-model="user.address" placeholder="">
+	                        </md-input-container>
+	                        <div layout layout-sm="column">
+	                            <md-input-container flex>
+	                                <label>Город</label>
+	                                <input ng-model="user.city" placeholder="">
+	                            </md-input-container>
+	                            <md-input-container flex>
+	                                <label>Область</label>
+	                                <input ng-model="user.state" placeholder="">
+	                            </md-input-container>
+	                            <md-input-container flex>
+	                                <label>Почтовый код</label>
+	                                <input ng-model="user.postalCode" placeholder="">
+	                            </md-input-container>
+	                            <md-button class="md-fab md-primary" aria-label="Сохранить" ng-click="save()">
+	                                <md-icon icon="svg/icon.svg" style="width: 24px; height: 24px;"></md-icon>
+	                            </md-button>
+	                        </div>
+	                    </form>
+	                </md-content>
+	            </md-whiteframe>
+	        </div>
+	        <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1">
+	            <md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+	                <md-content>
+	                    <md-list>
+	                        <md-item ng-repeat="item in users">
+	                            <md-item-content>
+	                                <div class="md-tile-content">
+	                                    <h3>{{item.firstName}} {{item.lastName}}</h3>
+	                                    <h4>Из города {{item.city}}, область {{item.state}}</h4>
+	                                    <p>
+	                                        Адрес: {{item.address}}
+	                                    </p>
+	                                </div>
+	                                <md-button class="md-raised md-warn" ng-click="delete($index, $event)">Удалить</md-button>
+	                            </md-item-content>
+	                        </md-item>
+	                    </md-list>
+	                </md-content>
+	            </md-whiteframe>
+	        </div>
+	    </ng-switch>
+	</div>
+
+	<script type="text/javascript" src="js/hammer.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="js/angular-aria.min.js"></script>
+	<script type="text/javascript" src="js/angular-material.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
